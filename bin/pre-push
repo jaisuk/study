@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+isort --recursive --check-only laboratory tests
+if [ $? -ne 0 ]; then
+  echo "[!] isort failed! Run 'isort -rc -y laboratory tests'"
+  exit 1
+fi
+echo "[+] isort success!"
+
+
+
+pylint laboratory
+if [ $? -ne 0 ]; then
+  echo "[!] pylint failed! Please fix code before push"
+  exit 1
+fi
+echo "[+] pylint success!"
+
+mypy laboratory
+if [ $? -ne 0 ]; then
+  echo "[!] mypy failed! Please fix code before push"
+  exit 1
+fi
+echo "[+] mypy success!"
+
+exit 0
