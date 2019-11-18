@@ -1,4 +1,4 @@
-# study-keras
+# study
 
 [![Python Version: 3.7](https://badgen.net/badge/python/3.7/blue)](https://docs.python.org/3.7/)
 
