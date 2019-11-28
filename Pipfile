@@ -17,6 +17,8 @@ keras = "*"
 tensorflow = "*"
 matplotlib = "*"
 flask = "*"
+seaborn = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
